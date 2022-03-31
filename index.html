@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+    * {
+	box-sizing: border-box;
+}
+
+input[type="file"] {
+	position: absolute;
+	right: -9999px;
+	visibility: hidden;
+	opacity: 0;
+}
+input[type="submit"] {
+	position: relative;
+	padding: 1rem 3rem;
+	background: #0c8fda;
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 0;
+	color:#fff;
+	
+}
+input[type="submit"]:hover {
+		background: darken(#0c8fda, 5);
+		color: #fff;
+		cursor: pointer;
+		transition: 0.2s all;
+	}
+label {
+	position: relative;
+	padding: 1rem 3rem;
+	background: #eee;
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 10px;
+	
+}
+label:hover{
+    background: #0c8fda;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+
+
+
+div.container {
+		width: 100%;
+		padding: 0 2rem;
+	}
+div.files {
+		background: #eee;
+		padding: 1rem;
+		margin:1rem 0;
+		border-radius:10px;
+		
+	}
+div.files ul{
+  list-style:none;
+			padding:0;
+			max-height:150px;
+			overflow:auto;
+}
+div.files li{
+  padding:0.5rem 0;
+				padding-right:2rem;
+				position:relative;
+}
+div.files li i{
+  cursor:pointer;
+					position:absolute;
+					top:50%;
+					right:0;
+					transform:translatey(-50%);
+}
+span.file-size {
+	color: #999;
+	padding-left: 0.5rem;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multiple File Upload Viewer</h1>
+    </div>
+    <div class="container">
+    <form action="">
+        <div>
+            <label for="fileupload">
+                <input type="file"  id="fileupload" type="file" name="fileupload" multiple>
+            Upload Files
+            </label>
+        </div>
+        <div class="files">
+            <h2>Files Selected</h2>
+            <ul></ul>
+        </div>
+        <input type="submit" value="Submit" name="submit" id="submit" />
+    </form>	
+    </div>
+    <script src="./uploader.js"></script>
+</body>
+
+</html>
